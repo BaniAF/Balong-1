@@ -3,7 +3,8 @@
     <div class="app-brand demo">
         <a href="/" class="app-brand-link">
             <img src="{{ asset('assets/img/logokab.png') }}" alt="" style="width:40px; height:4 0px">
-            <span class="app-brand-text demo menu-text fw-bolder m-2 text-uppercase" style="font-size: 25px;">Kecamatan <br> BALONG</span>
+            <span class="app-brand-text demo menu-text fw-bolder m-2 text-uppercase" style="font-size: 25px;">Kecamatan
+                <br> BALONG</span>
         </a>
 
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -56,7 +57,7 @@
                 <div data-i18n="Account Settings">Program Kegiatan</div>
             </a>
         </li>
-        
+
         <li class="menu-item">
             <a href="layanan-publik" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-dock-top"></i>
@@ -79,15 +80,45 @@
             </a>
         </li>
         <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <!-- <i class="menu-icon tf-icons bx bx-lock-open-alt"></i> -->
-            <i class='menu-icon tf-icons bx bxs-user-circle'></i>
-            <div data-i18n="Authentications">Akun</div>
-        </a>
+            <a href="/pegawai" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-envelope'></i>
+                <div data-i18n="Basic">Data Saran</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <!-- <i class="menu-icon tf-icons bx bx-lock-open-alt"></i> -->
+                <i class='menu-icon tf-icons bx bxs-user-circle'></i>
+                <div data-i18n="Authentications">Akun</div>
+            </a>
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="/akun" class="menu-link">
                         <div data-i18n="Basic">Daftar Akun</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Setting</span>
+        </li>
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <!-- <i class="menu-icon tf-icons bx bx-lock-open-alt"></i> -->
+                <i class='menu-icon tf-icons bx bxs-user-circle'></i>
+                <div data-i18n="Authentications">Items</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="/menu" class="menu-link">
+                        <div data-i18n="Basic">Menu Items</div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="submenu" class="menu-link">
+                        <div data-i18n="Basic">sub Menu Items</div>
                     </a>
                 </li>
             </ul>

@@ -18,6 +18,8 @@ use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\layananController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\ProkerController;
+use App\Http\Controllers\MenuItemController;
+use App\Http\Controllers\SubmenuItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +38,9 @@ Route::get('/articles/{article}', [ArticleController::class, 'show'])->name('art
 Route::get('/petasitus', [mapsController::class, 'showMap'])->name('maps');
 Route::get('/kontak', [ContactController::class, 'showForm'])->name('contact.form');
 Route::post('/kontak', [ContactController::class, 'submitForm'])->name('contact.submit');
+
+Route::get('/program', [ProkerController::class, 'showDropdown'])->name('program.index');
+Route::get('/program/{id}', [ProkerController::class, 'show'])->name('program.show');
 
 Route::get('/pdf/{filename}', function ($filename) {
     $path = public_path('files/' . $filename);
@@ -111,4 +116,15 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/pegawai', [PegawaiController::class, 'tampilPegawai'])->name('pegawai');
     Route::post('/tambah-pegawai', [PegawaiController::class, 'tambahPegawai'])->name('tambah-pegawai');
     Route::post('/pegawai/{id}/hapus', [PegawaiController::class, 'hapusPegawai'])->name('pegawai-hapus');
+
+    // kelola menu
+    Route::get('/menu', [MenuItemController::class, 'create'])->name('menu.create');
+    Route::post('/menu', [MenuItemController::class, 'store'])->name('menuitem.store');
+
+    // kelola submenu
+    Route::get('/submenu', [SubmenuItemController::class, 'create'])->name('submenu.create');
+    Route::post('/submenu', [SubmenuItemController::class, 'store'])->name('submenuitem.store');
+
+    //kelola saran
+
 });

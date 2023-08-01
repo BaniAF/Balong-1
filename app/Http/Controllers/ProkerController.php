@@ -8,6 +8,23 @@ use Illuminate\Http\Request;
 
 class ProkerController extends Controller
 {
+    // untuk tampilan user
+
+    public function show($id)
+    {
+        $proker = Proker::find($id);
+
+        return view('proker.show', compact('proker'));
+    }
+
+    public function showDropdown()
+    {
+        $prokers = Proker::select('namaProker')->get();
+        return view('layouts.navbar', ['prokers' => $prokers]);
+    }
+
+    // ------------------------------ //
+
     public function daftarProker()
     {
         $prokerja = Proker::all();

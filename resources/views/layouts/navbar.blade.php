@@ -33,14 +33,35 @@
             <li class="flex">
                 <a rel="noopener noreferrer" href="#"
                     class="flex items-center px-4 -mb-1 border-b-2 border-transparent">Program Kerja</a>
+                <ul class="dropdown hidden absolute mt-2 py-2 w-32 bg-gray-800 rounded-lg shadow-lg">
+                    <li><a href="#" class="block px-4 py-2 text-white hover:bg-indigo-500 hover:text-white">Menu
+                            1</a></li>
+                    <li><a href="#" class="block px-4 py-2 text-white hover:bg-indigo-500 hover:text-white">Menu
+                            2</a></li>
+                    <!-- Tambahkan menu-dropdown lain di sini -->
+                </ul>
             </li>
             <li class="flex">
                 <a rel="noopener noreferrer" href="#"
                     class="flex items-center px-4 -mb-1 border-b-2 border-transparent">Bidang</a>
+                <ul class="dropdown hidden absolute mt-2 py-2 w-32 bg-gray-800 rounded-lg shadow-lg">
+                    <li><a href="#" class="block px-4 py-2 text-white hover:bg-indigo-500 hover:text-white">Menu
+                            1</a></li>
+                    <li><a href="#" class="block px-4 py-2 text-white hover:bg-indigo-500 hover:text-white">Menu
+                            2</a></li>
+                    <!-- Tambahkan menu-dropdown lain di sini -->
+                </ul>
             </li>
             <li class="flex">
                 <a rel="noopener noreferrer" href="#"
                     class="flex items-center px-4 -mb-1 border-b-2 border-transparent">Regulasi</a>
+                <ul class="dropdown hidden absolute mt-2 py-2 w-32 bg-gray-800 rounded-lg shadow-lg">
+                    <li><a href="#" class="block px-4 py-2 text-white hover:bg-indigo-500 hover:text-white">Menu
+                            1</a></li>
+                    <li><a href="#" class="block px-4 py-2 text-white hover:bg-indigo-500 hover:text-white">Menu
+                            2</a></li>
+                    <!-- Tambahkan menu-dropdown lain di sini -->
+                </ul>
             </li>
             <li class="flex">
                 <a rel="noopener noreferrer" href="#"
@@ -59,7 +80,7 @@
                     class="flex items-center px-4 -mb-1 border-b-2 border-transparent">Kontak</a>
             </li>
             <li class="flex">
-                <a rel="noopener noreferrer" href="{{ route('maps') }}"
+                <a rel="noopener noreferrer" href=""
                     class="flex items-center px-4 -mb-1 border-b-2 border-transparent">Peta Situs</a>
             </li>
         </ul>
