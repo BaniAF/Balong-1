@@ -97,7 +97,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/layanan/{id}/hapus', [LayananController::class, 'hapusLayanan'])->name('layanan-hapus');
 
     // Dashboard
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('home');
+    Route::get('/admin', [DashboardController::class, 'index'])->name('home');
 
     // Kelola Akun
     Route::get('/akun', [AkunController::class, 'daftarAkun'])->name('akun');
