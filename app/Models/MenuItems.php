@@ -14,4 +14,9 @@ class MenuItems extends Model
         'link',
         'status',
     ];
+
+    public function submenus()
+    {
+        return $this->hasMany(SubmenuItem::class, 'id')->where('status', 'enable');
+    }
 }

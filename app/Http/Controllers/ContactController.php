@@ -31,4 +31,10 @@ class ContactController extends Controller
 
         return view('contact.thankyou');
     }
+
+    public function index()
+    {
+        $saran = Contact::All();
+        return view('admin.pages.saran', compact('saran'));
+    }
 }

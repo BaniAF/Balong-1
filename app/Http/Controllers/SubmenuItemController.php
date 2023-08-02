@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\MenuItems;
+use App\Models\SubmenuItem;
 use Illuminate\Http\Request;
 
 class SubmenuItemController extends Controller
@@ -29,9 +30,23 @@ class SubmenuItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'menu_item_id' => 'required|exists:menu_items,id',
+            'status' => 'required|in:enable,disable',
+            'link' => 'nullable',
+        ]);
 
+        SubmenuItem::create([
+            'name' => $request->name,
+            'menu_item_id' => $request->menu_item_id,
+            'status' => $request->status,
+            'link' => $request->link,
+        ]);
+
+        return redirect()->route('submenu.create')
+            ->with('success', 'SubMenu item has been created successfully.');
+    }
     /**
      * Display the specified resource.
      */

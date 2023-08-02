@@ -57,11 +57,28 @@
                 <div data-i18n="Account Settings">Program Kegiatan</div>
             </a>
         </li>
-
+        <li class="menu-item">
+            <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons bx bxs-user-detail"></i>
+                <div data-i18n="Account Settings">Profil</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons bx bxs-dashboard"></i>
+                <div data-i18n="Account Settings">Bidang</div>
+            </a>
+        </li>
         <li class="menu-item">
             <a href="layanan-publik" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-dock-top"></i>
                 <div data-i18n="Account Settings">Layanan Publik</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons bx bxs-landmark"></i>
+                <div data-i18n="Account Settings">Regulasi</div>
             </a>
         </li>
         <li class="menu-header small text-uppercase">
@@ -80,7 +97,7 @@
             </a>
         </li>
         <li class="menu-item">
-            <a href="/pegawai" class="menu-link">
+            <a href="/saran" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-envelope'></i>
                 <div data-i18n="Basic">Data Saran</div>
             </a>
@@ -99,7 +116,7 @@
                 </li>
             </ul>
         </li>
-        <li class="menu-header small text-uppercase">
+        {{-- <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Setting</span>
         </li>
         <li class="menu-item">
@@ -122,7 +139,7 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> --}}
     </ul>
 </aside>
 <!-- / Menu -->

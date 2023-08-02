@@ -16,16 +16,32 @@
     <div class="container flex justify-between h-16 mx-auto">
         <ul class="items-stretch hidden space-x-3 lg:flex">
             <li class="flex">
-                <a rel="noopener noreferrer" href="{{ route('landing') }}"
+                <a rel="noopener noreferrer" href="#"
                     class="flex items-center px-4 -mb-1 border-b-2 border-transparent">Home</a>
             </li>
             <li class="flex relative">
                 <a href="#" class="flex items-center px-4 -mb-1 border-b-2 border-transparent">Profil</a>
-                <ul class="dropdown hidden absolute mt-2 py-2 w-32 bg-gray-800 rounded-lg shadow-lg">
-                    <li><a href="#" class="block px-4 py-2 text-white hover:bg-indigo-500 hover:text-white">Menu
-                            1</a></li>
-                    <li><a href="#" class="block px-4 py-2 text-white hover:bg-indigo-500 hover:text-white">Menu
-                            2</a></li>
+                <ul
+                    class="dropdown hidden absolute mt-2 py-2 w-44 text-sm dark:bg-gray-800 bg-white rounded-md shadow-lg">
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">Organisasi
+                            dan Tata
+                            Kerja</a></li>
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">Tugas
+                            dan Fungsi</a></li>
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">Struktur
+                            Organisasi</a></li>
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">Visi,
+                            Misi, Tujuan, Sasaran</a></li>
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">Profil
+                            Pejabat Struktural</a></li>
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">Jumlah
+                            Pegawai berdasarkan Pendidikan/ Pangkat/ Golongan/ Jenis Kelamin</a></li>
                     <!-- Tambahkan menu-dropdown lain di sini -->
                 </ul>
             </li>
@@ -33,33 +49,71 @@
             <li class="flex">
                 <a rel="noopener noreferrer" href="#"
                     class="flex items-center px-4 -mb-1 border-b-2 border-transparent">Program Kerja</a>
-                <ul class="dropdown hidden absolute mt-2 py-2 w-32 bg-gray-800 rounded-lg shadow-lg">
-                    <li><a href="#" class="block px-4 py-2 text-white hover:bg-indigo-500 hover:text-white">Menu
-                            1</a></li>
-                    <li><a href="#" class="block px-4 py-2 text-white hover:bg-indigo-500 hover:text-white">Menu
-                            2</a></li>
+                <ul
+                    class="dropdown hidden absolute mt-2 py-2 w-44 text-sm dark:bg-gray-800 bg-white rounded-md shadow-lg">
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black text-md hover:bg-indigo-500 hover:text-white">RENJA</a>
+                    </li>
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">RENSTRA</a>
+                    </li>
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">IKU</a>
+                    </li>
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">DPA</a>
+                    </li>
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">PERJANJIAN
+                            KINERJA</a></li>
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">LAPORAN
+                            KINERJA</a>
+                    </li>
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">RENCANA
+                            KERJA</a>
+                    </li>
+
                     <!-- Tambahkan menu-dropdown lain di sini -->
                 </ul>
             </li>
             <li class="flex">
                 <a rel="noopener noreferrer" href="#"
                     class="flex items-center px-4 -mb-1 border-b-2 border-transparent">Bidang</a>
-                <ul class="dropdown hidden absolute mt-2 py-2 w-32 bg-gray-800 rounded-lg shadow-lg">
-                    <li><a href="#" class="block px-4 py-2 text-white hover:bg-indigo-500 hover:text-white">Menu
-                            1</a></li>
-                    <li><a href="#" class="block px-4 py-2 text-white hover:bg-indigo-500 hover:text-white">Menu
-                            2</a></li>
+                <ul
+                    class="dropdown hidden absolute mt-2 py-2 w-44 text-sm dark:bg-gray-800 bg-white rounded-md shadow-lg">
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">Bidang</a>
+                    </li>
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">Unit
+                            Kerja</a></li>
                     <!-- Tambahkan menu-dropdown lain di sini -->
                 </ul>
             </li>
             <li class="flex">
                 <a rel="noopener noreferrer" href="#"
                     class="flex items-center px-4 -mb-1 border-b-2 border-transparent">Regulasi</a>
-                <ul class="dropdown hidden absolute mt-2 py-2 w-32 bg-gray-800 rounded-lg shadow-lg">
-                    <li><a href="#" class="block px-4 py-2 text-white hover:bg-indigo-500 hover:text-white">Menu
-                            1</a></li>
-                    <li><a href="#" class="block px-4 py-2 text-white hover:bg-indigo-500 hover:text-white">Menu
-                            2</a></li>
+                <ul
+                    class="dropdown hidden absolute mt-2 py-2 w-44 text-sm dark:bg-gray-800 bg-white rounded-lg shadow-lg">
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">Undang
+                            - Undang</a></li>
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">Peraturan
+                            Pemerintah</a></li>
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">Peraturan
+                            Menteri</a></li>
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">Peraturan
+                            Bupati</a>
+                    </li>
+                    <li><a href="#"
+                            class="block px-4 py-2 dark:text-white text-black hover:bg-indigo-500 hover:text-white">Peraturan
+                            Daerah</a>
+                    </li>
                     <!-- Tambahkan menu-dropdown lain di sini -->
                 </ul>
             </li>
@@ -115,11 +169,16 @@
     .dropdown {
         display: none;
         /* Sembunyikan dropdown secara default */
+        position: absolute;
+        /* Add this to position the dropdown correctly */
+        z-index: 1;
+        /* Add this to make sure the dropdown appears above other content */
     }
 
     /* Tampilkan dropdown ketika elemen li di-hover */
     li:hover .dropdown {
-        margin-top: 50px;
+        margin-top: 60px;
         display: block;
+        display: inline;
     }
 </style>

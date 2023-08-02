@@ -19,6 +19,7 @@ use App\Http\Controllers\layananController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\ProkerController;
 use App\Http\Controllers\MenuItemController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SubmenuItemController;
 
 /*
@@ -36,11 +37,18 @@ Route::get('/', [LandingController::class, 'index'])->name('landing');
 
 Route::get('/articles/{article}', [ArticleController::class, 'show'])->name('articles.show');
 Route::get('/petasitus', [mapsController::class, 'showMap'])->name('maps');
+
+//route contact me
 Route::get('/kontak', [ContactController::class, 'showForm'])->name('contact.form');
 Route::post('/kontak', [ContactController::class, 'submitForm'])->name('contact.submit');
 
+//route untuk program kerja
 Route::get('/program', [ProkerController::class, 'showDropdown'])->name('program.index');
 Route::get('/program/{id}', [ProkerController::class, 'show'])->name('program.show');
+
+//route untuk profil
+Route::get('/profil', [ProfileController::class, 'showProfi'])->name('profil.show');
+Route::get('/profil/{id}', [ProkerController::class, 'show'])->name('profil.show');
 
 Route::get('/pdf/{filename}', function ($filename) {
     $path = public_path('files/' . $filename);
@@ -126,5 +134,5 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/submenu', [SubmenuItemController::class, 'store'])->name('submenuitem.store');
 
     //kelola saran
-
+    Route::get('/saran', [ContactController::class, 'index'])->name('saran.index');
 });
