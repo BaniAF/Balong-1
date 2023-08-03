@@ -15,8 +15,13 @@ class Kategori extends Model
         'id',
         'namaKategori'
     ];
-    public function getNamaKategoriAttribute() {
+    public function getNamaKategoriAttribute()
+    {
         return $this->attributes['namaKategori'];
     }
 
+    public function artikel()
+    {
+        return $this->hasMany(Article::class, 'kategoriPost', 'id');
+    }
 }

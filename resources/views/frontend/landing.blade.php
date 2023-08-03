@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('frontend.layouts.app')
 
 @section('content')
     {{-- slider --}}
@@ -11,9 +11,9 @@
                 <div class="hero-content flex-col justify-items-center">
                     <img src="https://source.unsplash.com/random/800x600/?2" class="max-w-sm rounded-lg shadow-2xl" />
                     <div class="align-baseline">
-                        @foreach ($articles->take(1) as $article)
+                        @foreach ($artikel->take(1) as $article)
                             <h1 class="text-2xl font-bold hover:text-red-500 justify-items-center">
-                                <a href="{{ route('articles.show', $article) }}">{{ $article->judulArtikel }}</a>
+                                <a href="{{ route('articles.show', $article) }}">{{ $article->judulPost }}</a>
                             </h1>
                             <p class="py-2">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
                                 exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
@@ -64,7 +64,7 @@
         {{-- isi dari berita utama --}}
         <div class="flex flex-wrap gap-1 bg-green-400 ml-9 my-4 mr-2 w-2/3 items-center justify-center">
             {{-- kolom berita --}}
-            @foreach ($articles->take(10) as $article)
+            @foreach ($artikel as $article)
                 <div class="p-2 my-1  ">
                     <div class="card bg-gray-500 dark:bg-white shadow-xl w-48 items-center">
                         <figure class="">
@@ -72,7 +72,7 @@
                         </figure>
                         <div class="card-body">
                             <h2 class="card-title dark:text-black text-white hover:text-red-500 text-sm">
-                                <a href="{{ route('articles.show', $article) }}">{{ $article->judulArtikel }}</a>
+                                <a href="{{ route('post.show', $article) }}">{{ $article->judulPost }}</a>
                             </h2>
                         </div>
                     </div>

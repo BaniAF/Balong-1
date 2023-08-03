@@ -163,4 +163,13 @@ class PostController extends Controller
             return redirect('/post');
         }
     }
+
+    public function lihat(Post $article)
+    {
+        // Pass the $article data to the frontend.show.blade.php view
+        return view('frontend.articles.show', [
+            'article' => $article,
+            'relatedArticles' => $article->related(),
+        ]);
+    }
 }

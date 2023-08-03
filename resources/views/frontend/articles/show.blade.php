@@ -1,15 +1,17 @@
-@extends('layouts.app')
+@extends('frontend.layouts.app')
 @section('content')
     <div class="flex mx-10 my-10 ">
         {{-- isi dari berita --}}
         <div class="w-2/3 mx-5 p-4 my-5">
-            <h1 class="font-bold text-4xl p-1"> Judul Artikel : {{ $article->judulArtikel }}</h1>
-            <h2 class="font-bold p-1"> . kategori : {{ $article->category->namaKategori }}</h2>
-            @if ($article->image)
-                <img src="{{ asset('images/' . $article->image) }}" alt="Article Image">
+            <h1 class="font-bold text-4xl p-1"> Judul Artikel : {{ $article->judulPost }}</h1>
+            <h2 class="font-bold p-1"> . kategori : {{ $article->kategori->namaKategori }}</h2>
+            @if ($article->fotoPost)
+                <img src="{{ asset('uploads/' . $article->fotoPost) }}" alt="Article Image">
             @endif
 
-            <!-- Cek apakah isi artikel adalah file PDF atau dokumen -->
+            <p>{!! $article->isiPost !!}</p>
+
+            {{-- <!-- Cek apakah isi artikel adalah file PDF atau dokumen -->
             @if (Str::endsWith($article->isiArtikel, ['.pdf', '.doc', '.docx', '.ppt', '.pptx', '.xls', '.xlsx']))
                 <embed src="{{ asset('documents/' . $article->isiArtikel) }}" type="application/pdf" width="100%"
                     height="600px">
@@ -21,8 +23,7 @@
                 </video>
             @else
                 <!-- Jika isi artikel bukan file PDF, dokumen, atau video -->
-                <p>{!! $article->isiArtikel !!}</p>
-            @endif
+            @endif --}}
         </div>
 
         {{-- isi dari berita terkait --}}
@@ -35,8 +36,7 @@
                     @foreach ($relatedArticles as $relatedArticle)
                         <div class="grid grid-cols-1 hover:text-yellow-300 mt-4">
                             <li class="text-sm p-0">
-                                <a
-                                    href="{{ route('articles.show', $relatedArticle) }}">{{ $relatedArticle->judulArtikel }}</a>
+                                <a href="{{ route('post.show', $relatedArticle) }}">{{ $relatedArticle->judulArtikel }}</a>
                                 <div class="divider m-1"></div>
                             </li>
                         </div>

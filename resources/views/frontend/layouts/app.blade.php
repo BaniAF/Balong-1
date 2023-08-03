@@ -21,7 +21,7 @@
 
     </div>
     <div class="lg bg-gray-100 dark:bg-gray-900">
-        @include('layouts.navbar')
+        @include('frontend.layouts.navbar')
 
         <!-- Page Heading -->
         {{-- @if (isset($header))
@@ -38,7 +38,7 @@
         </main>
     </div>
     <div>
-        @include('layouts.footer')
+        @include('frontend.layouts.footer')
     </div>
 
 </body>

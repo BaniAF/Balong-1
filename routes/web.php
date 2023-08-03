@@ -36,6 +36,9 @@ use App\Http\Controllers\SubmenuItemController;
 Route::get('/', [LandingController::class, 'index'])->name('landing');
 
 Route::get('/articles/{article}', [ArticleController::class, 'show'])->name('articles.show');
+
+Route::get('post/{article}', [PostController::class, 'lihat'])->name('post.show');
+
 Route::get('/petasitus', [mapsController::class, 'showMap'])->name('maps');
 
 //route contact me
