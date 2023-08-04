@@ -25,7 +25,15 @@
         {{-- end hero section --}}
         <div class="divider lg:divider-horizontal p-4"></div>
         {{-- weather --}}
-        {{-- <div class="mt-8 ml-15 mr-10 w-1/3">
+
+        {{-- @if (isset($weather) && !empty($weather))
+            <h2>Weather in {{ $weather['name'] }}</h2>
+            <p>Temperature: {{ $weather['main']['temp'] }} &deg;C</p>
+            <p>Description: {{ $weather['weather'][0]['description'] }}</p>
+        @else
+            <p>No weather data available.</p>
+        @endif --}}
+        <div class="mt-8 ml-15 mr-10 w-1/3">
             <div class="flex flex-col bg-white rounded p-4 w-full max-w-xs">
                 <div class="font-bold text-2xl">{{ $weather['name'] }}</div>
                 @php
@@ -55,7 +63,7 @@
                     </div>
                 </div>
             </div>
-        </div> --}}
+        </div>
         {{-- end weather --}}
     </div>
 
@@ -94,4 +102,65 @@
             @endforeach
         </div>
     </div>
+
+
+    <section id="berita-kategori" class="p-4">
+
+        <!-- Category: Variasi -->
+        <div class="bg-purple-500 flex flex-wrap gap-1 ml-9 my-2 mr-2 w-2/3 items-center justify-center p-4 rounded-lg">
+            <h1 class="text-white text-3xl font-bold">Berita Variasi</h1>
+            <div class="grid grid-cols-1 gap-4 mt-4">
+                <!-- News Post 1 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="path/to/news1-image.jpg" alt="News 1 Image" class="w-full h-48 object-cover rounded-lg">
+                    <h2 class="text-purple-500 text-xl font-bold">News Title 1</h2>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec scelerisque
+                        arcu.</p>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- News Post 2 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="path/to/news2-image.jpg" alt="News 2 Image" class="w-full h-48 object-cover rounded-lg">
+                    <h2 class="text-purple-500 text-xl font-bold">News Title 2</h2>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec scelerisque
+                        arcu.</p>
+                </div>
+
+                <!-- Add more news posts here for the "Variasi" category -->
+
+            </div>
+        </div>
+
+        <!-- Category: Another Category -->
+        <div class="bg-purple-500 flex flex-wrap gap-1 ml-9 my-2 mr-2 w-2/3 items-center justify-center p-4 rounded-lg">
+            <h1 class="text-white text-3xl font-bold">Berita Another Category</h1>
+            <div class="grid grid-cols-1 gap-4 mt-4">
+                <!-- News Post 1 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="path/to/news3-image.jpg" alt="News 3 Image" class="w-full h-48 object-cover rounded-lg">
+                    <h2 class="text-purple-500 text-xl font-bold">News Title 1</h2>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec scelerisque
+                        arcu.</p>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- News Post 2 -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="path/to/news4-image.jpg" alt="News 4 Image" class="w-full h-48 object-cover rounded-lg">
+                    <h2 class="text-purple-500 text-xl font-bold">News Title 2</h2>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec scelerisque
+                        arcu.</p>
+                </div>
+
+                <!-- Add more news posts here for the "Another Category" category -->
+
+            </div>
+        </div>
+
+        <!-- Add more categories here -->
+
+    </section>
 @endsection
